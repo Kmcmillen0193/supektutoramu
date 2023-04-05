@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Supekutoramu スペクトラム</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+
+
+<!----- HEADER START--->   
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Supekutoramu スペクトラム </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >Home&nbsp;</a></li>
+		<li><a href="#slide2" title="Next Section">Mission&nbsp;</a></li>
+		<li><a href="#slide3" title="Next Section">Sustainatbility&nbsp;</a></li>
+		<li><a  href="#slide4" title="Next Section">Menu&nbsp;</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+<!----- HEADER END--->   
+
+<!----- SLIDES START --->   	
+	<div id="slide1">
+		<div class="content">
+            <h2>スペクトラム</h2>
+		    <h1>Supekutoramu</h1>
+		    <div id="divider"> </div>
+			<h3>&nbsp;#1 IN THE DECATUR AREA&nbsp;&nbsp; </h3>
+			<h3 class="tag">Hours of Operation</h3>
+			<h2>Monday-Friday: 11am-9pm</h2> <br>
+			<h2>Saturday: 4pm-11pm</h2> <br>
+			<h2>Sunday: Closed</h2>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="tag">Local and Global</h3>
+			<p>We are Supektutoramu. We are locally and ethically sourced restaurant supplying authentic Japanese cuisine to the Town of Decatur. </p>
+		</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div class="quotes_container">
+		       <h3 class="tag">Sustainable</h3>
+			<p>Our meat products are sourced from farms local to the Central Illionis area. We are committed to supporting our local businesses while providing high quality authentic Japanese cuisine to the town of Decatur.</p>
+		    </div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content">
+		  <h3 class="tag">Menu</h3>
+              <div class="quotes_container">
+		    <h3 class="menuitem">Tonkatsu $8.99 </h3> <br>
+			    <img src="img/tonkatsu.jpg" width="300" height="300" alt=""/> <br>
+<h3 class="menuitem">Ramen $4.99 </h3> <br>
+			    <img src="img/ramen.jpg" width="300" height="300" alt=""/> <br>
+<h3 class="menuitem">Yakisoba $5.99 </h3> <br>
+		  <img src="img/yakisoba.jpg" width="300" height="300" alt=""/> </div> 
+		</div>
+	
+	
+
+	
+<!----- SLIDES END --->
+
+</body>
+</html>
